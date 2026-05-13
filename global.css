@@ -26,8 +26,12 @@ header label {
   gap: 0.5em;
 }
 
-header time {
-  display: block;
+header time,
+header em {
+  display: inline-block;
+  min-width: 5em;      
+  text-align: left;
+  font-variant-numeric: tabular-nums;  
 }
 
 header em {
