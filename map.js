@@ -185,13 +185,16 @@ map.on('load', async () => {
 
   function updateTimeDisplay() {
     timeFilter = Number(timeSlider.value);
+
     if (timeFilter === -1) {
-      selectedTime.textContent = '';
-      anyTimeLabel.style.display = 'block';
+      selectedTime.style.visibility = 'hidden';
+      anyTimeLabel.style.visibility = 'visible';
     } else {
       selectedTime.textContent = formatTime(timeFilter);
-      anyTimeLabel.style.display = 'none';
+      selectedTime.style.visibility = 'visible';
+      anyTimeLabel.style.visibility = 'hidden';
     }
+
     updateScatterPlot(timeFilter);
   }
 

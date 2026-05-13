@@ -12,18 +12,21 @@ body {
 header {
   display: flex;
   gap: 1em;
-  align-items: baseline;
+  align-items: center;
+  margin-bottom: 1em;
 }
 
 h1 {
   margin: 0;
+  white-space: nowrap;
 }
 
 header label {
   margin-left: auto;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5em;
+  white-space: nowrap;
 }
 
 header input[type="range"] {
@@ -38,6 +41,7 @@ header input[type="range"] {
   height: 1.5em;
   text-align: left;
   font-variant-numeric: tabular-nums;
+  flex: none;
 }
 
 .time-display > time,
@@ -50,4 +54,20 @@ header input[type="range"] {
 header em {
   color: #999;
   font-style: italic;
+}
+
+/* Make the layout work better on smaller screens */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header label {
+    margin-left: 0;
+  }
+
+  header input[type="range"] {
+    width: 100%;
+  }
 }
