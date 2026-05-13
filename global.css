@@ -26,19 +26,28 @@ header label {
   gap: 0.5em;
 }
 
-header time,
-header em {
+header input[type="range"] {
+  width: 12em;
+  flex: none;
+}
+
+.time-display {
+  position: relative;
   display: inline-block;
-  min-width: 5em;      
+  width: 6em;
+  height: 1.5em;
   text-align: left;
-  font-variant-numeric: tabular-nums;  
+  font-variant-numeric: tabular-nums;
+}
+
+.time-display > time,
+.time-display > em {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 header em {
   color: #999;
   font-style: italic;
-}
-
-header input[type="range"] {
-  flex: 1;
 }
