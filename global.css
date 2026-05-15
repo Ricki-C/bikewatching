@@ -14,11 +14,13 @@ header {
   gap: 1em;
   align-items: center;
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 
 h1 {
   margin: 0;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.1;
 }
 
 header label {
@@ -27,21 +29,24 @@ header label {
   align-items: center;
   gap: 0.5em;
   white-space: nowrap;
+  flex: 0 1 auto;
 }
 
 header input[type="range"] {
   width: 12em;
+  min-width: 12em;
   flex: none;
 }
 
 .time-display {
   position: relative;
   display: inline-block;
-  width: 6em;
+  width: 7em;
+  min-width: 7em;
   height: 1.5em;
   text-align: left;
   font-variant-numeric: tabular-nums;
-  flex: none;
+  flex: 0 0 7em;
 }
 
 .time-display > time,
@@ -49,6 +54,7 @@ header input[type="range"] {
   position: absolute;
   left: 0;
   top: 0;
+  white-space: nowrap;
 }
 
 header em {
@@ -63,11 +69,19 @@ header em {
     align-items: stretch;
   }
 
+  h1 {
+    white-space: normal;
+  }
+
   header label {
     margin-left: 0;
+    flex-wrap: wrap;
+    white-space: normal;
   }
 
   header input[type="range"] {
     width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
   }
 }
