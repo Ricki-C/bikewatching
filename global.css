@@ -33,8 +33,9 @@ header label {
 }
 
 header input[type="range"] {
-  width: 12em;
-  min-width: 12em;
+  width: 192px;
+  min-width: 192px;
+  max-width: 192px;
   flex: none;
 }
 
