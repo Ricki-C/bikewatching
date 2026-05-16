@@ -17,8 +17,12 @@ let arrivalsByMinute = Array.from({ length: 1440 }, () => []);
 let timeFilter = -1;
 
 function formatTime(minutes) {
-  const date = new Date(0, 0, 0, 0, minutes);
-  return date.toLocaleString('en-US', { timeStyle: 'short' });
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  const period = hours >= 12 ? 'PM' : 'AM';
+  const displayHours = hours % 12 || 12;
+
+  return `${String(displayHours).padStart(2, '0')}:${String(mins).padStart(2, '0')} ${period}`;
 }
 
 function minutesSinceMidnight(date) {
