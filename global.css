@@ -42,13 +42,13 @@ header input[type="range"] {
 .time-display {
   position: relative;
   display: inline-block;
-  width: 112px;
-  min-width: 112px;
+  width: 8ch;
+  min-width: 8ch;
   height: 1.5em;
-  text-align: left;
+  text-align: right;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
-  flex: 0 0 112px;
+  flex: 0 0 8ch;
 }
 
 .time-display > time,
