@@ -227,3 +227,4 @@ map.on('load', async () => {
 
   updateTimeDisplay();
 });
+
